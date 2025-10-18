@@ -95,7 +95,26 @@ export default function DashboardLayout({ children }) {
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
               <NotificationBell />
-              <span style={{ color: "#6b7280" }}>{session.user.name}</span>
+              <div
+                style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                <div
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    borderRadius: "50%",
+                    background:
+                      "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "white",
+                    fontWeight: "600",
+                    fontSize: "14px",
+                  }}>
+                  {getUserInitials(session.user.name)}
+                </div>
+                <span style={{ color: "#6b7280" }}>{session.user.name}</span>
+              </div>
               <button
                 onClick={handleSignOut}
                 className="btn btn-secondary"
@@ -108,9 +127,50 @@ export default function DashboardLayout({ children }) {
       </nav>
 
       {/* Main Content */}
-      <main style={{ padding: "32px 0" }}>
+      <main style={{ padding: "32px 0", minHeight: "calc(100vh - 200px)" }}>
         <div className="container">{children}</div>
       </main>
+
+      {/* Footer */}
+      <footer
+        style={{
+          background: "white",
+          borderTop: "1px solid #e5e7eb",
+          padding: "24px 0",
+          marginTop: "48px",
+        }}>
+        <div className="container">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: "16px",
+            }}>
+            <div style={{ color: "#6b7280", fontSize: "14px" }}>
+              © {new Date().getFullYear()} Flood Relief Management System
+            </div>
+            <div style={{ display: "flex", gap: "16px", fontSize: "14px" }}>
+              <Link href="/dashboard" style={{ color: "#2563eb" }}>
+                Dashboard
+              </Link>
+              <Link
+                href="/dashboard/notifications"
+                style={{ color: "#2563eb" }}>
+                Notifications
+              </Link>
+              <a
+                href="https://github.com/SADMAN30102001SAKIB/flood-management"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#2563eb" }}>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
