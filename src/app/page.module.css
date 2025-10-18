@@ -1,0 +1,179 @@
+.homepage {
+  min-height: 100vh;
+  background: #f9fafb;
+}
+
+.nav {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.logo h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.navLinks {
+  display: flex;
+  gap: 12px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 20px;
+  margin-bottom: 32px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.heroCta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.guidelines {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1f2937;
+}
+
+.guidelineList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.guidelineItem {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.guidelineItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.guidelineItem strong {
+  display: block;
+  color: #1f2937;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.guidelineItem p {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.firstAid {
+  padding: 60px 0;
+  background: #f9fafb;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1f2937;
+}
+
+.features {
+  padding: 60px 0;
+  background: white;
+}
+
+.featureIcon {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.features h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1f2937;
+  text-align: center;
+}
+
+.features p {
+  color: #6b7280;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.footer {
+  background: #1f2937;
+  color: white;
+  padding: 32px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+  
+  .heroSubtitle {
+    font-size: 16px;
+  }
+  
+  .heroCta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .heroCta .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .navContent {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .navLinks {
+    width: 100%;
+    justify-content: center;
+  }
+}

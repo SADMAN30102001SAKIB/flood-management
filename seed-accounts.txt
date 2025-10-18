@@ -1,0 +1,17 @@
+👨‍💼 ADMIN (1 account)
+admin@floodrelief.com	Admin@123	✅ Can Login
+
+👤 USERS (3 accounts)
+user1@example.com	User@123	✅ Can Login
+user2@example.com	User@123	✅ Can Login
+user3@example.com	User@123	⏳ Pending
+
+🤝 PERMANENT VOLUNTEERS (4 accounts)
+volunteer1@example.com	Volunteer@123	Medical	✅ Can Login
+volunteer2@example.com	Volunteer@123	Rescue	✅ Can Login
+volunteer3@example.com	Volunteer@123	Food	✅ Can Login
+volunteer4@example.com	Volunteer@123	Logistics	⏳ Pending
+
+🚨 EMERGENCY VOLUNTEERS (2 accounts)
+emergency1@example.com	Volunteer@123	Rescue	✅ Can Login
+emergency2@example.com	Volunteer@123	Medical	✅ Can Login
