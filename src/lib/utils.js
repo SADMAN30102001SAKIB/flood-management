@@ -129,11 +129,25 @@ export function formatDate(date) {
 }
 
 /**
- * Log with timestamp
+ * Log with timestamp and color-coded levels
  */
 export function logWithTimestamp(message, level = 'info') {
   const timestamp = new Date().toISOString();
-  const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+  const timeStr = `\x1b[90m[${timestamp}]\x1b[0m`; // Gray timestamp
+  
+  // Color-coded log levels
+  const levelColors = {
+    error: '\x1b[31m',   // Red
+    warn: '\x1b[33m',    // Yellow
+    info: '\x1b[36m',    // Cyan
+    success: '\x1b[32m', // Green
+    debug: '\x1b[35m'    // Magenta
+  };
+  
+  const color = levelColors[level] || levelColors.info;
+  const reset = '\x1b[0m';
+  const levelStr = `${color}[${level.toUpperCase()}]${reset}`;
+  const logMessage = `${timeStr} ${levelStr} ${message}`;
   
   if (level === 'error') {
     console.error(logMessage);

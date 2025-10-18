@@ -61,6 +61,10 @@ After seeding:
 
 See inline OpenAPI-style comments in `/app/api/` routes.
 
+## Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for our Git workflow, coding guidelines, and how to submit pull requests.
+
 ## License
 
 MIT
